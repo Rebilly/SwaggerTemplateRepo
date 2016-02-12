@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "swagger-repo": "0.0.2"
+    "swagger-repo": "IvanGoncharov/swagger-repo"
   },
   "private": true,
   "scripts": {
