@@ -16,6 +16,7 @@ set -o pipefail
   git add .
   git commit -m "Deployed to Github Pages"
 
+
   echo '=================================='
   git config --get remote.origin.url
   echo '=================================='
