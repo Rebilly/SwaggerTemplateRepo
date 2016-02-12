@@ -8,15 +8,15 @@ set -o pipefail
   set -e
   set -x
 
-  mkdir deploy_gh_pages
+  mkdir deploy_to_gh_pages
 
   git config user.name "Travis-CI"
   git config user.email "travis@travis"
 
-  npm run swagger bundle --json -o deploy_gh_pages/swagger.json
-  npm run swagger bundle --yaml -o deploy_gh_pages/swagger.json
+  npm run swagger bundle --json -o deploy_to_gh_pages/swagger.json
+  npm run swagger bundle --yaml -o deploy_to_gh_pages/swagger.json
 
-  cd deploy_gh_pages
+  cd deploy_to_gh_pages
   git add .
   git commit -m "Deployed to Github Pages"
 
