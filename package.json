@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "swagger-repo": "0.0.1"
+  },
+  "private": true,
+  "scripts": {
+    "swagger": "swagger-repo",
+    "test": "true"
+  }
+}
