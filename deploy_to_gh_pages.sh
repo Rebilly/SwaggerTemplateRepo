@@ -8,6 +8,8 @@ set -o pipefail
   set -e
   set -x
 
+  GH_REPO=$(git config --get remote.origin.url)
+
   mkdir deploy_to_gh_pages
 
   git config user.name "Travis-CI"
@@ -20,9 +22,6 @@ set -o pipefail
   git add .
   git commit -m "Deployed to Github Pages"
 
-
-  echo '=================================='
-  git config --get remote.origin.url
-  echo '=================================='
-  #git push --force "https://${GH_TOKEN}@${GH_REF}" master:gh-pages 2>&1
+  GH_URL=$(echo "$GH_REPO" | sed "s#://#${GH_TOKEN}@#")
+  git push --force "$GH_URL" master:gh-pages 2>&1
 ) 2>&1 | sed "s/${GH_TOKEN}/xxPASSxx/"
