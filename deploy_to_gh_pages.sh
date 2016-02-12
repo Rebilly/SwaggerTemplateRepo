@@ -8,6 +8,9 @@ set -o pipefail
   GH_REPO=$(git config --get remote.origin.url)
 
   mkdir deploy_to_gh_pages
+  cd deploy_to_gh_pages
+
+  git init
 
   git config user.name "Travis-CI"
   git config user.email "travis@travis"
@@ -15,7 +18,6 @@ set -o pipefail
   npm run swagger bundle -- --json -o deploy_to_gh_pages/swagger.json
   npm run swagger bundle -- --yaml -o deploy_to_gh_pages/swagger.json
 
-  cd deploy_to_gh_pages
   git add .
   git commit -m "Deployed to Github Pages"
 
