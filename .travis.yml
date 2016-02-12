@@ -4,6 +4,6 @@ node_js:
 deploy:
   skip_cleanup: true
   provider: script
-  script: ./scripts/deploy_gh_pages.sh
+  script: ./deploy_gh_pages.sh
   on:
     branch: master
