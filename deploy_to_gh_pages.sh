@@ -16,7 +16,7 @@ set -o pipefail
   git config user.email "travis@travis"
 
   npm run swagger bundle -- --json -o deploy_to_gh_pages/swagger.json
-  npm run swagger bundle -- --yaml -o deploy_to_gh_pages/swagger.json
+  npm run swagger bundle -- --yaml -o deploy_to_gh_pages/swagger.yaml
 
   git add .
   git commit -m "Deployed to Github Pages"
