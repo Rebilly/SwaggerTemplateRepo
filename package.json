@@ -5,6 +5,6 @@
   "private": true,
   "scripts": {
     "swagger": "swagger-repo",
-    "test": "true"
+    "test": "swagger-repo validate"
   }
 }
