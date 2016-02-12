@@ -1,8 +1,5 @@
 #!/bin/bash
 
-#FIXME:
-GH_TOKEN=1234
-
 set -o pipefail
 (
   set -e
@@ -22,6 +19,6 @@ set -o pipefail
   git add .
   git commit -m "Deployed to Github Pages"
 
-  GH_URL=$(echo "$GH_REPO" | sed "s#://#${GH_TOKEN}@#")
+  GH_URL=$(echo "$GH_REPO" | sed "s#://#&${GH_TOKEN}@#")
   git push --force "$GH_URL" master:gh-pages 2>&1
 ) 2>&1 | sed "s/${GH_TOKEN}/xxPASSxx/"
