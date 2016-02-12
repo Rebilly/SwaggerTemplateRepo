@@ -1,4 +1,8 @@
 #!/bin/bash
+
+#FIXME:
+GH_TOKEN=1234
+
 set -o pipefail
 (
   set -e
