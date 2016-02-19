@@ -3,8 +3,12 @@
 set -e
 set -x
 
-mkdir deploy_to_gh_pages
+cp portal portal_deploy
 
-npm run swagger bundle --        -o deploy_to_gh_pages/swagger.json
-npm run swagger bundle -- --yaml -o deploy_to_gh_pages/swagger.yaml
+cd portal_deploy
+bower install
+cd -
+
+npm run swagger bundle --        -o portal_deploy/swagger.json
+npm run swagger bundle -- --yaml -o portal_deploy/swagger.yaml
 
