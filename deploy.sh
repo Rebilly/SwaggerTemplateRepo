@@ -3,7 +3,7 @@
 set -e
 set -x
 
-cp portal portal_deploy
+cp -R portal portal_deploy
 
 cd portal_deploy
 bower install
