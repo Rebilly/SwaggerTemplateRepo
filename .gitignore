@@ -1,3 +1,6 @@
+# Dir for API portal deploy
+portal_deploy
+
 # Bower dependency directory
 bower_components
 
