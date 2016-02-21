@@ -3,12 +3,12 @@
 set -e
 set -x
 
-cp -R portal portal_deploy
+cp -R web web_deploy
 
-cd portal_deploy
+cd web_deploy
 bower install
 cd -
 
-npm run swagger bundle --        -o portal_deploy/swagger.json
-npm run swagger bundle -- --yaml -o portal_deploy/swagger.yaml
+npm run swagger bundle --        -o web_deploy/swagger.json
+npm run swagger bundle -- --yaml -o web_deploy/swagger.yaml
 

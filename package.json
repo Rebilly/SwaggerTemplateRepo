@@ -6,7 +6,7 @@
   },
   "private": true,
   "scripts": {
-    "deploy": "./scripts/deploy.sh && deploy-to-gh-pages portal_deploy",
+    "deploy": "./scripts/deploy.sh && deploy-to-gh-pages web_deploy",
     "swagger": "swagger-repo",
     "test": "swagger-repo validate"
   }
