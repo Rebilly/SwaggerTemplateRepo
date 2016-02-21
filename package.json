@@ -1,8 +1,8 @@
 {
   "dependencies": {
     "bower": "^1.7.7",
-    "deploy-to-gh-pages": "0.0.1",
-    "swagger-repo": "IvanGoncharov/swagger-repo"
+    "deploy-to-gh-pages": "^1.0.0",
+    "swagger-repo": "^1.0.0"
   },
   "private": true,
   "scripts": {
