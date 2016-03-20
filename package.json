@@ -2,12 +2,17 @@
   "dependencies": {
     "bower": "^1.7.7",
     "deploy-to-gh-pages": "^1.0.0",
-    "swagger-repo": "^1.0.0"
+    "gulp": "^3.9.1",
+    "gulp-connect": "^3.2.0",
+    "gulp-run": "^1.6.12",
+    "swagger-repo": "^1.0.0",
+    "swagger-ui": "^2.1.4"
   },
   "private": true,
   "scripts": {
     "deploy": "./scripts/deploy.sh && deploy-to-gh-pages web_deploy",
     "swagger": "swagger-repo",
-    "test": "swagger-repo validate"
+    "test": "swagger-repo validate",
+    "start": "gulp serve"
   }
 }
