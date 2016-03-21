@@ -1,4 +1,4 @@
-var gulp = require('gulp');
+var gulp = require('gulp-npm-run')(require('gulp'));
 var connect = require('gulp-connect');
 var cors = require('cors');
 var run = require('gulp-run');
@@ -20,11 +20,9 @@ gulp.task('serve', ['watch'], function() {
     }
   });
 });
-
-gulp.task('build', function () {
-  return run('./scripts/build.sh').exec();
-});
-
+/*
+ * build task is populated from package.json by gulp-npm-run
+ */
 gulp.task('reload', ['build'], function () {
   gulp.src(DIST_DIR).pipe(connect.reload())
 });

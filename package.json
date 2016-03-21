@@ -5,13 +5,13 @@
     "deploy-to-gh-pages": "^1.0.0",
     "gulp": "^3.9.1",
     "gulp-connect": "^3.2.0",
-    "gulp-run": "^1.6.12",
     "swagger-repo": "^1.0.0",
     "swagger-ui": "^2.1.4"
   },
   "private": true,
   "scripts": {
-    "deploy": "./scripts/build.sh && deploy-to-gh-pages web_deploy",
+    "deploy": "npm run build && deploy-to-gh-pages web_deploy",
+    "build": "bash ./scripts/build.sh",
     "swagger": "swagger-repo",
     "test": "swagger-repo validate",
     "start": "gulp serve"
