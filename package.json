@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "bower": "^1.7.7",
+    "cors": "^2.7.1",
     "deploy-to-gh-pages": "^1.0.0",
     "gulp": "^3.9.1",
     "gulp-connect": "^3.2.0",

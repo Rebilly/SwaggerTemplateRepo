@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var connect = require('gulp-connect');
+var cors = require('cors');
 var run = require('gulp-run');
 var path = require('path');
 
@@ -13,7 +14,8 @@ gulp.task('serve', ['watch'], function() {
     port: 3000,
     middleware: function (connect, opt) {
       return [
-        connect().use('/swagger-ui', connect.static(SWAGGER_UI_DIST))
+        connect().use('/swagger-ui', connect.static(SWAGGER_UI_DIST)),
+        cors()
       ]
     }
   });
