@@ -1,8 +1,8 @@
-var gulp = require('gulp-npm-run')(require('gulp'));
+var gulp = require('gulp');
 var connect = require('gulp-connect');
 var cors = require('cors');
-var run = require('gulp-run');
 var path = require('path');
+var exec = require('child_process').exec;
 
 var DIST_DIR = 'web_deploy';
 var SWAGGER_UI_DIST = path.dirname(require.resolve('swagger-ui'));
@@ -20,9 +20,14 @@ gulp.task('serve', ['watch'], function() {
     }
   });
 });
-/*
- * build task is populated from package.json by gulp-npm-run
- */
+
+gulp.task('build', function (cb) {
+  exec('npm run build', function (err, stdout, stderr) {
+    console.log(stderr);
+    cb(err);
+  });
+});
+
 gulp.task('reload', ['build'], function () {
   gulp.src(DIST_DIR).pipe(connect.reload())
 });
