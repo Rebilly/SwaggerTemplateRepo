@@ -1,0 +1,17 @@
+{
+  "generator-openapi-repo": {
+    "name": "SwaggerTemplateRepo",
+    "description": "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.",
+    "version": "1.0.0",
+    "email": "apiteam@swagger.io",
+    "username": " ",
+    "redocVersion": "latest",
+    "travis": true,
+    "repo": "Rebilly/SwaggerTemplateRepo",
+    "branchPreview": true,
+    "packageName": "swagger-tmpl-repo",
+    "specVersion": "0.0.0",
+    "samples": true,
+    "installSwaggerUI": true
+  }
+}
