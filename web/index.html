@@ -27,17 +27,8 @@
     </style>
   </head>
   <body>
-    <redoc>
+    <redoc spec-url="./swagger.json">
     </redoc>
     <script src="//rebilly.github.io/ReDoc/releases/latest/redoc.min.js"> </script>
-    <script>
-      var branch = window.location.search.match(/preview=([^&]+)/);
-      if (branch && branch.length > 1) {
-        branch = decodeURIComponent(branch[1]);
-        Redoc.init('./branches/' + branch + '/swagger.json')
-      } else {
-        Redoc.init('./swagger.json')
-      }
-    </script>>
   </body>
 </html>
