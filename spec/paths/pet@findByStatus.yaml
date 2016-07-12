@@ -1,8 +1,6 @@
 get:
   tags:
     - pet
-    - Pagination
-    - JSONP
   summary: Finds Pets by status
   description: Multiple status values can be provided with comma seperated strings
   operationId: findPetsByStatus

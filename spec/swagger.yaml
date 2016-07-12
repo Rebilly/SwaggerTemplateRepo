@@ -16,50 +16,20 @@ info:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
 externalDocs:
-  description: Find out more about Swagger
-  url: 'http://swagger.io'
+  description: Find out how to create Github repo for your OpenAPI spec.
+  url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
-  - name: Pagination
+  - name: Introduction
     x-traitTag: true
     description: >-
-      Sometimes you just can't get enough. For this reason, we've provided
-      a convenient way to access more data in any request for sequential data.
-      Simply call the url in the next_url parameter and we'll respond with the
-      next set of data.
-
-      ```json
-
-      {
-
-          ...
-
-          "pagination": {
-
-              "next_url":
-      "https://api.instagram.com/v1/tags/puppy/media/recent?access_token=fb2e77d.47a0479900504cb3ab4a1f626d174d2d&max_id=13872296",
-
-              "next_max_id": "13872296"
-
-          }
-
-      }
-
-      ```
-
-       On views where pagination is present, we also support the `count`
-      parameter. Simply set this to the number of items you'd like to receive.
-      Note that the default values should be fine for most applications - but if
-      you decide to increase this number there is a maximum value defined on each
-      endpoint.
+      This API is documented in OpenAPI format and is based on [Pestore sample](http://petstore.swagger.io/) provided by [swagger.io](http://swagger.io) team.
+      It was extended to illustrate features of [generator-openapi-repo](https://github.com/Rebilly/generator-openapi-repo) tool.
+      In addition to standard OpenAPI syntax we use a few [vendor extensions](https://github.com/Rebilly/ReDoc/blob/master/docs/redoc-vendor-extensions.md).
+  - name: OpenAPI Specification
+    description: The goal of The OpenAPI Specification is to define a standard, language-agnostic interface to REST APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined via OpenAPI, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interfaces have done for lower-level programming, OpenAPI removes the guesswork in calling the service.
     externalDocs:
       description: Find out more
-      url: 'http://swagger.io'
-  - name: JSONP
-    x-traitTag: true
-    description: "If you're writing an AJAX application, and you'd like to wrap our response with a callback, all you have to do is specify a callback parameter with any API call:\n```\n https://api.instagram.com/v1/tags/coffee/media/recent?access_token=fb2e77d.47a0479900504cb3ab4a1f626d174d2d&callback=callbackFunction\n```\nWould respond with:\n```js\ncallbackFunction({\n    ...\n});\n``` \n > Example of markdown blockquote"
-    externalDocs:
-      description: Find out more
-      url: 'http://swagger.io'
+      url: 'https://openapis.org/'
   - name: pet
     description: Everything about your Pets
     externalDocs:

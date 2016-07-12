@@ -1,7 +1,6 @@
 get:
   tags:
     - store
-    - JSONP
   summary: Returns pet inventories by status
   description: Returns a map of status codes to quantities
   operationId: getInventory
