@@ -2,7 +2,7 @@ post:
   tags:
     - pet
   summary: Add a new pet to the store
-  description: ''
+  description: 'Add new pet to the store inventory.'
   operationId: addPet
   consumes:
     - application/json

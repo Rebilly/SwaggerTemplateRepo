@@ -7,8 +7,7 @@ properties:
   petType:
     type: string
   id:
-    type: integer
-    format: int64
+    $ref: '#/definitions/Id'
   category:
     $ref: '#/definitions/Category'
   name:
@@ -21,6 +20,7 @@ properties:
       wrapped: true
     items:
       type: string
+      format: url
   tags:
     type: array
     xml:

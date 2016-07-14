@@ -7,7 +7,7 @@ allOf:
         type: integer
         format: int32
         description: the size of the pack the dog is from
-        default: 0
-        minimum: 0
+        default: 1
+        minimum: 1
     required:
       - packSize
