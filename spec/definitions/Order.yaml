@@ -1,15 +1,20 @@
 type: object
 properties:
   id:
-    type: integer
-    format: int64
+    description: Order ID
+    allOf:
+      - $ref: '#/definitions/Id'
   petId:
-    type: integer
-    format: int64
+    description: Pet ID
+    allOf:
+      - $ref: '#/definitions/Id'
   quantity:
     type: integer
     format: int32
+    minimum: 1
+    default: 1
   shipDate:
+    description: Estimated ship date
     type: string
     format: date-time
   status:
@@ -20,6 +25,7 @@ properties:
       - approved
       - delivered
   complete:
+    description: Indicates whenever order was completed or not
     type: boolean
     default: false
 xml:

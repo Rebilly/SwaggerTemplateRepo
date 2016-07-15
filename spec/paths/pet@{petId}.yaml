@@ -1,7 +1,6 @@
 get:
   tags:
     - pet
-    - JSONP
   summary: Find pet by ID
   description: Returns a single pet
   operationId: getPetById

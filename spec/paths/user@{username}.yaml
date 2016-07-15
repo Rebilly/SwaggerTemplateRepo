@@ -1,7 +1,6 @@
 get:
   tags:
     - user
-    - JSONP
   summary: Get user by user name
   description: ''
   operationId: getUserByName

@@ -5,23 +5,31 @@ required:
 discriminator: petType
 properties:
   petType:
+    description: Type of a pet
     type: string
   id:
-    type: integer
-    format: int64
+    description: Pet ID
+    allOf:
+      - $ref: '#/definitions/Id'
   category:
-    $ref: '#/definitions/Category'
+    description: Categories this pet belongs to
+    allOf:
+      - $ref: '#/definitions/Category'
   name:
+    description: The name given to a pet
     type: string
-    example: doggie
+    example: Guru
   photoUrls:
+    description: The list of URL to a cute photos featuring pet
     type: array
     xml:
       name: photoUrl
       wrapped: true
     items:
       type: string
+      format: url
   tags:
+    description: Tags attached to the pet
     type: array
     xml:
       name: tag
@@ -30,7 +38,7 @@ properties:
       $ref: '#/definitions/Tag'
   status:
     type: string
-    description: pet status in the store
+    description: Pet status in the store
     enum:
       - available
       - pending
