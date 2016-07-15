@@ -30,6 +30,11 @@ tags:
     externalDocs:
       description: Find out more
       url: 'https://openapis.org/'
+  - name: Cross-Origin Resource Sharing
+    description: |
+      This API features Cross-Origin Resource Sharing (CORS) implemented in compliance with  [W3C spec](https://www.w3.org/TR/cors/).
+      And that allows cross-domain communication from the browser.
+      All responses have a wildcard same-origin which makes them completely public and accessible to everyone, including any code on any site.
   - name: pet
     description: Everything about your Pets
   - name: store
