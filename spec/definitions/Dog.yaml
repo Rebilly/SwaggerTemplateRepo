@@ -6,7 +6,7 @@ allOf:
       packSize:
         type: integer
         format: int32
-        description: the size of the pack the dog is from
+        description: The size of the pack the dog is from
         default: 1
         minimum: 1
     required:
