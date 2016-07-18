@@ -23,6 +23,8 @@ get:
       description: successful operation
       schema:
         type: string
+      examples:
+        application/json: OK
       headers:
         X-Rate-Limit:
           type: integer
